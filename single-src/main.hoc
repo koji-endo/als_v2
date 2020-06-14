@@ -49,12 +49,10 @@ if(DOSE==1000){
     if(NSTIM==1){
 	spt_file_dir ="../input/spiketiming/1000dose_1stims_filtering/"
     }else if(NSTIM>1){
-	//spt_file_dir ="../input/spiketiming/1000dose_30stims_filtering/"
 	spt_file_dir ="../input/spiketiming/1000dose_30stims_filtering_adaptation/"
     }
 }else if(DOSE==2000){
     if(NSTIM==1){
-	//spt_file_dir ="../input/spiketiming/2000dose_1stims_filtering/"
     }else if(NSTIM>1){
 	spt_file_dir ="../input/spiketiming/2000dose_30stims_filtering/"
     }
@@ -67,7 +65,6 @@ if(DOSE==1000){
     }
 }else if(DOSE==10){
     if(NSTIM==1){
-	//spt_file_dir ="../input/spiketiming/10dose_1stims_filtering/"
     }else if(NSTIM>1){
 	spt_file_dir ="../input/spiketiming/10dose_30stims_filtering/"
     }
@@ -83,11 +80,11 @@ if(DOSE==1000){
     spt_file_dir ="../input/spiketiming/1000dose_30stims_100dose_30stims_filtering/"
 }
 */
+
 if(DOSE==1000){
     if(NSTIM==1){
 	spt_file_dir ="../input/spiketiming/1000dose_1stims_poisson/"
     }else if(NSTIM>1){
-	//spt_file_dir ="../input/spiketiming/1000dose_30stims_filtering/"
 	spt_file_dir ="../input/spiketiming/1000dose_30stims_poisson/"
     }
 }else if(DOSE==2000){
@@ -206,8 +203,8 @@ proc mkCells(){local i,ncell localobj cell, nc, nil
 proc mkConnections(){
     if(pc.id==0)printf("mkConnections()\n")
     // connect RN to LN and PN
-    //ConnectWithRN()
-    ConnectWithVecStim(DOSE,NSTIM)
+    ConnectWithRN()
+    //ConnectWithVecStim(DOSE,NSTIM)
     // connect LN and PN
     ConnectNtoN_NET_GABA()
 }
@@ -583,7 +580,7 @@ proc mkIclamp_PN(){local i localobj ic
 }
 
 proc mkStim(){
-    //mkSerialStim()
+    mkSerialStim()
     //mkIclamp_LN()
     //mkIclamp_PN()
     //mkstim_random()

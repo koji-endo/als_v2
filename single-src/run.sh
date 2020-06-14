@@ -12,12 +12,13 @@ echo "DATA DIRECTORY : ${RECORD_DIR}"
 mkdir -p ${RECORD_DIR}
 mkdir -p ${SPIKE_DIR}
 
-NRNIV="../specials/x86_64/special -mpi"
-HOC_NAME="./main-local.hoc"
+NRNIV="/home/endo/park202006/neuron_kplus/specials/x86_64/special -mpi"
+
+HOC_NAME="./main.hoc"
 
 
 NRNOPT=\
-" -c STOPTIME=6000"\
+" -c STOPTIME=60000"\
 " -c IS_SUPERCOMPUTER=0"\
 " -c START_TIME=${Time}"\
 " -c GABAB_ON=1"\
