@@ -14,7 +14,7 @@ mkdir -p ${SPIKE_DIR}
 
 NRNIV="/home/endo/park202006/neuron_kplus/specials/x86_64/special -mpi"
 
-HOC_NAME="./main.hoc"
+HOC_NAME="./main-test.hoc"
 
 
 NRNOPT=\
@@ -57,3 +57,4 @@ python ../src/drawGraph.py $RECORD_DIR
 #python ../src/drawISF.py $SPIKE_DIR
 python ../src/spike_analyze.py $SPIKE_DIR
 python ../src/whole_in_one_spike.py $SPIKE_DIR
+~/notify2.sh "main-test end"

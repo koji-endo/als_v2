@@ -49,3 +49,5 @@ job/.*
 #*.xlsx
 tail
 al_env
+
+single-src/log
